@@ -1,3 +1,5 @@
 # random files
 *.pdf
 
+# venv
+*.venv/
