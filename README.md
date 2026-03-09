@@ -37,7 +37,7 @@ segmentation-cvis/
 
 ## Como colaborar?
 
-1. faça um fork (se estiver usando GitHub/GitLab) ou clone o repositório:
+1. faça um fork (se estiver usando GitHub) ou clone o repositório:
    - `git clone <url-do-repositorio>`
    - `cd segmentation-cvis`
 
@@ -63,4 +63,4 @@ segmentation-cvis/
    - **Por que** foi alterado
    - Como **reproduzir/testar** os resultados
 
-8. aguarde revisão, faça ajustes se necessário e, após aprovação, faça o merge (ou peça para alguém com permissão fazer).
+8. aguarde revisão, faça ajustes se necessário e, após aprovação, faça o merge.
