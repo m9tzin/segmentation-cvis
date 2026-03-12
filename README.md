@@ -1,4 +1,5 @@
 # segmentation-cvis
+
 implementation of classical computer vision segmentation algorithms
 
 ## estrutura inicial do projeto
@@ -18,7 +19,27 @@ segmentation-cvis/
 └── README.md
 ```
 
-## TODO – algoritmos a implementar
+## inicializando:
+
+O setup agora é realizado com uv sync:
+
+1. install uv (se não tiver instalado):
+
+```
+curl -LsSf https://astral.sh/uv/install.sh | sh
+uv --version
+```
+
+2. install dependencies:
+
+```
+uv sync
+uv venv
+```
+
+inicializado a venv, só executar o notebook :)
+
+## todo – algoritmos a implementar
 
 - [ ] Limiarização manual com histograma em tons de cinza
 - [ ] Implementação manual do método de Otsu
@@ -33,7 +54,6 @@ segmentation-cvis/
 - [ ] Pós-processamento morfológico: abertura (erosão + dilatação)
 - [ ] Pós-processamento morfológico: fechamento (dilatação + erosão)
 - [ ] Análise comparativa final: Original × Otsu × HSV × K-means × Pós-processado
-
 
 ## Como colaborar?
 
