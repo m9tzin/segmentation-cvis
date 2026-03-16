@@ -41,8 +41,8 @@ inicializado a venv, só executar o notebook :)
 
 ## todo – algoritmos a implementar
 
-- [ ] Limiarização manual com histograma em tons de cinza
-- [ ] Implementação manual do método de Otsu
+- [X] Limiarização manual com histograma em tons de cinza
+- [X] Implementação manual do método de Otsu
 - [ ] Comparação com Otsu usando função pronta (OpenCV / scikit-image)
 - [ ] Limiarização adaptativa (OpenCV)
 - [ ] Visualização dos canais R, G, B e análise das limitações do espaço RGB
