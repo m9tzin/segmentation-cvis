@@ -1,5 +1,7 @@
 # Implementação manual do k-means no plano a*b* do espaço L*a*b*.
 
+import operator
+
 import numpy as np
 import cv2
 
@@ -36,6 +38,17 @@ def kmeans_ab(img_rgb, k, max_iter=100, tol=1e-4, seed=42):
     ab = lab[:, :, 1:3].reshape(-1, 2)
     N = ab.shape[0]
 
+    try:
+        k = operator.index(k)
+    except TypeError:
+        raise ValueError(
+            f"k must be an integer between 1 and N (N={N}), got k={k!r}"
+        ) from None
+    if not (1 <= k <= N):
+        raise ValueError(
+            f"k must be an integer between 1 and N (N={N}), got k={k!r}"
+        )
+
     rng = np.random.RandomState(seed)
     indices = rng.choice(N, size=k, replace=False)
     centroids = ab[indices].copy()
@@ -63,10 +76,17 @@ def kmeans_ab(img_rgb, k, max_iter=100, tol=1e-4, seed=42):
         centroids = new_centroids
 
         if shift < tol:
+            # Rótulos devem corresponder aos centróides já atualizados
+            dists = np.linalg.norm(ab[:, None, :] - centroids[None, :, :], axis=2)
+            labels_flat = np.argmin(dists, axis=1)
             all_snapshots.append(
                 (it + 1, labels_flat.reshape(H, W).copy(), centroids.copy())
             )
             break
+
+    # Última atualização de centróides sem nova atribuição (ex.: parada por max_iter)
+    dists = np.linalg.norm(ab[:, None, :] - centroids[None, :, :], axis=2)
+    labels_flat = np.argmin(dists, axis=1)
 
     total = len(all_snapshots)
     pick = [0, total // 2, total - 1]
