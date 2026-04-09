@@ -47,7 +47,7 @@ inicializado a venv, só executar o notebook :)
 - [x] Plotar histograma e indicar `T` com linha vertical
 - [x] Implementar Otsu manualmente (histograma + somas cumulativas)
 - [ ] Comparar Otsu manual com função pronta (OpenCV/scikit-image)
-- [ ] Aplicar limiarização adaptativa (OpenCV) e comparar com limiares globais
+- [x] Aplicar limiarização adaptativa (OpenCV) e comparar com limiares globais
 - [ ] Registrar casos de sucesso e falha em diferentes imagens
 
 ### Parte II - Espaços de cor e cromaticidade
