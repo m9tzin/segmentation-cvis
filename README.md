@@ -39,21 +39,51 @@ uv venv
 
 inicializado a venv, só executar o notebook :)
 
-## todo – algoritmos a implementar
+## to-do – roteiro da atividade (por partes)
 
-- [X] Limiarização manual com histograma em tons de cinza
-- [X] Implementação manual do método de Otsu
-- [ ] Comparação com Otsu usando função pronta (OpenCV / scikit-image)
-- [ ] Limiarização adaptativa (OpenCV)
-- [ ] Visualização dos canais R, G, B e análise das limitações do espaço RGB
-- [ ] Conversão para HSV e limiarização no canal H
-- [ ] Conversão para L\*a\*b\* e limiarização usando canais a\* e b\*
-- [ ] Implementação manual do k-means no plano a\*b\*
-- [ ] Análise de k-means variando o número de clusters (k)
-- [ ] Visualização da evolução dos centróides no plano a\*b\*
-- [ ] Pós-processamento morfológico: abertura (erosão + dilatação)
-- [ ] Pós-processamento morfológico: fechamento (dilatação + erosão)
-- [ ] Análise comparativa final: Original × Otsu × HSV × K-means × Pós-processado
+### Parte I - Limiarização (Thresholding)
+
+- [x] Converter imagem para tons de cinza e aplicar limiar manual `T`
+- [x] Plotar histograma e indicar `T` com linha vertical
+- [x] Implementar Otsu manualmente (histograma + somas cumulativas)
+- [ ] Comparar Otsu manual com função pronta (OpenCV/scikit-image)
+- [x] Aplicar limiarização adaptativa (OpenCV) e comparar com limiares globais
+- [ ] Registrar casos de sucesso e falha em diferentes imagens
+
+### Parte II - Espaços de cor e cromaticidade
+
+- [ ] Exibir canais `R`, `G` e `B` separadamente e discutir limitações do RGB
+- [ ] Converter para `HSV` e segmentar usando canal `H`
+- [ ] Converter para `L*a*b*` e segmentar usando canais `a*` e `b*`
+- [ ] Comparar resultados de RGB vs HSV vs L*a*b\*
+- [ ] Destacar impacto de sombras, reflexos e variações de iluminação
+
+### Parte III - Agrupamento K-Means
+
+- [x] Implementar k-means manual no plano `a*b*` (sem loop pronto de biblioteca)
+- [x] Testar diferentes valores de `k` e comparar segmentações
+- [x] Mostrar evolução dos centróides em pelo menos 3 momentos (início, meio, fim)
+- [x] Plotar dispersão no plano `a*b*` com pixels coloridos por cluster
+- [x] Interpretar se os clusters representam classes visuais úteis (tomate, folha, fundo)
+
+### Parte IV - Morfologia e refino
+
+- [ ] Escolher a melhor máscara das etapas anteriores
+- [ ] Aplicar abertura (erosão + dilatação) para remover ruídos isolados
+- [ ] Aplicar fechamento (dilatação + erosão) para preencher buracos/lacunas
+- [ ] Avaliar o impacto do tamanho do elemento estruturante
+- [ ] Comparar preservação de detalhes vs remoção de ruído
+
+### Entrega e apresentação:
+
+- [ ] Montar painel comparativo: `Original | Otsu | HSV | K-Means | Pós-processado`
+- [ ] Incluir visuais de apoio: histogramas, canais de cor, gráfico no plano `a*b*`
+- [ ] Preparar respostas objetivas para todas as reflexões do roteiro:
+  - Parte I: quando Otsu falha? como a janela local da adaptativa afeta ruído/detalhes?
+  - Parte II: qual espaço de cor foi mais robusto a sombras/reflexos e por quê?
+  - Parte III: quando usar apenas cromaticidade ajuda e quando perde informação?
+  - Parte IV: trade-off do elemento estruturante (suavização vs preservação de contorno)
+- [ ] Fechar com conclusão comparativa: robustez, custo computacional e cenários ideais
 
 ## Como colaborar?
 
