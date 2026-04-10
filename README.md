@@ -60,11 +60,11 @@ inicializado a venv, só executar o notebook :)
 
 ### Parte III - Agrupamento K-Means
 
-- [ ] Implementar k-means manual no plano `a*b*` (sem loop pronto de biblioteca)
-- [ ] Testar diferentes valores de `k` e comparar segmentações
-- [ ] Mostrar evolução dos centróides em pelo menos 3 momentos (início, meio, fim)
-- [ ] Plotar dispersão no plano `a*b*` com pixels coloridos por cluster
-- [ ] Interpretar se os clusters representam classes visuais úteis (tomate, folha, fundo)
+- [x] Implementar k-means manual no plano `a*b*` (sem loop pronto de biblioteca)
+- [x] Testar diferentes valores de `k` e comparar segmentações
+- [x] Mostrar evolução dos centróides em pelo menos 3 momentos (início, meio, fim)
+- [x] Plotar dispersão no plano `a*b*` com pixels coloridos por cluster
+- [x] Interpretar se os clusters representam classes visuais úteis (tomate, folha, fundo)
 
 ### Parte IV - Morfologia e refino
 
