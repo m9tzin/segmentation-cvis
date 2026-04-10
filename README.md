@@ -46,17 +46,17 @@ inicializado a venv, só executar o notebook :)
 - [x] Converter imagem para tons de cinza e aplicar limiar manual `T`
 - [x] Plotar histograma e indicar `T` com linha vertical
 - [x] Implementar Otsu manualmente (histograma + somas cumulativas)
-- [ ] Comparar Otsu manual com função pronta (OpenCV/scikit-image)
+- [x] Comparar Otsu manual com função pronta (OpenCV/scikit-image)
 - [x] Aplicar limiarização adaptativa (OpenCV) e comparar com limiares globais
-- [ ] Registrar casos de sucesso e falha em diferentes imagens
+- [x] Registrar casos de sucesso e falha em diferentes imagens
 
 ### Parte II - Espaços de cor e cromaticidade
 
-- [ ] Exibir canais `R`, `G` e `B` separadamente e discutir limitações do RGB
-- [ ] Converter para `HSV` e segmentar usando canal `H`
-- [ ] Converter para `L*a*b*` e segmentar usando canais `a*` e `b*`
-- [ ] Comparar resultados de RGB vs HSV vs L*a*b\*
-- [ ] Destacar impacto de sombras, reflexos e variações de iluminação
+- [x] Exibir canais `R`, `G` e `B` separadamente e discutir limitações do RGB
+- [x] Converter para `HSV` e segmentar usando canal `H`
+- [x] Converter para `L*a*b*` e segmentar usando canais `a*` e `b*`
+- [x] Comparar resultados de RGB vs HSV vs L*a*b\*
+- [x] Destacar impacto de sombras, reflexos e variações de iluminação
 
 ### Parte III - Agrupamento K-Means
 
@@ -87,30 +87,26 @@ inicializado a venv, só executar o notebook :)
 
 ## Como colaborar?
 
-1. faça um fork (se estiver usando GitHub) ou clone o repositório:
-   - `git clone <url-do-repositorio>`
-   - `cd segmentation-cvis`
-
-2. atualize sua branch `main` local:
+1. atualize sua branch `main` local:
    - `git checkout main`
    - `git pull origin main`
 
-3. crie uma nova branch para sua tarefa:
+2. crie uma nova branch para sua tarefa:
    - Para nova funcionalidade: `git checkout -b feature/nome-da-funcionalidade`
    - Para correção de bug: `git checkout -b fix/descricao-do-bug`
 
-4. faça as alterações no código e teste localmente (notebooks, scripts em `src/`, etc.).
+3. faça as alterações no código e teste localmente (notebooks, scripts em `src/`, etc.).
 
-5. adicione e faça commit das mudanças:
+4. adicione e faça commit das mudanças:
    - `git add .`
    - `git commit -m "Descrição curta e clara da mudança"`
 
-6. envie a branch para o repositório remoto:
+5. envie a branch para o repositório remoto:
    - `git push origin feature/nome-da-funcionalidade`
 
-7. abra um Pull Request (PR) para a branch `main`, descrevendo:
+6. abra um Pull Request (PR) para a branch `main`, descrevendo:
    - **O que** foi alterado
    - **Por que** foi alterado
    - Como **reproduzir/testar** os resultados
 
-8. aguarde revisão, faça ajustes se necessário e, após aprovação, faça o merge.
+7. aguarde revisão, faça ajustes se necessário e, após aprovação, faça o merge.
