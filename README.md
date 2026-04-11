@@ -68,16 +68,17 @@ inicializado a venv, só executar o notebook :)
 
 ### Parte IV - Morfologia e refino
 
-- [ ] Escolher a melhor máscara das etapas anteriores
-- [ ] Aplicar abertura (erosão + dilatação) para remover ruídos isolados
-- [ ] Aplicar fechamento (dilatação + erosão) para preencher buracos/lacunas
-- [ ] Avaliar o impacto do tamanho do elemento estruturante
-- [ ] Comparar preservação de detalhes vs remoção de ruído
+- [x] Escolher a melhor máscara das etapas anteriores
+- [x] Aplicar abertura (erosão + dilatação) para remover ruídos isolados
+- [x] Aplicar fechamento (dilatação + erosão) para preencher buracos/lacunas
+- [x] Avaliar o impacto do tamanho do elemento estruturante
+- [x] Comparar preservação de detalhes vs remoção de ruído
 
 ### Entrega e apresentação:
 
+- [x] Planejamento da apresentação
 - [ ] Montar painel comparativo: `Original | Otsu | HSV | K-Means | Pós-processado`
-- [ ] Incluir visuais de apoio: histogramas, canais de cor, gráfico no plano `a*b*`
+- [x] Incluir visuais de apoio: histogramas, canais de cor, gráfico no plano `a* b*`
 - [ ] Preparar respostas objetivas para todas as reflexões do roteiro:
   - Parte I: quando Otsu falha? como a janela local da adaptativa afeta ruído/detalhes?
   - Parte II: qual espaço de cor foi mais robusto a sombras/reflexos e por quê?
