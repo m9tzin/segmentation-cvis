@@ -7,17 +7,20 @@ implementation of classical computer vision segmentation algorithms
 ```
 segmentation-cvis/
 ├── notebook/
-│   └── atividade_segmentacao.ipynb   # notebook principal da atividade
+│   └── atividade_segmentacao.ipynb   # notebook principal (limiarização, cores, k-means, morfologia, painel comparativo)
 ├── src/
-│   ├── otsu.py                       # implementação do método de Otsu
-│   ├── kmeans.py                     # implementação do k-means em L*a*b*
-│   └── morphology.py                 # operações morfológicas de refino
+│   ├── otsu.py                       # método de Otsu (histograma + somas cumulativas)
+│   └── kmeans.py                     # k-means manual no plano a*b* (L*a*b*)
 ├── images/
-│   ├── input/                        # imagens de entrada (ex.: tomate.png)
-│   └── results/                      # resultados de segmentação e figuras
-├── requirements.txt
+│   ├── input/                        # imagens de entrada (ex.: tomates-corke.png, coins.png)
+│   └── results/                      # máscaras e figuras exportadas (k-means, painel comparativo, etc.)
+├── pyproject.toml                    # dependências e metadados do projeto (uv)
+├── uv.lock                           # lockfile das dependências
+├── .python-version                   # versão de Python usada no projeto
 └── README.md
 ```
+
+Operações morfológicas (Parte IV) são feitas no notebook com **OpenCV** (`cv2.morphologyEx`), sobre a máscara gerada pelo k-means.
 
 ## inicializando:
 
@@ -77,14 +80,8 @@ inicializado a venv, só executar o notebook :)
 ### Entrega e apresentação:
 
 - [x] Planejamento da apresentação
-- [ ] Montar painel comparativo: `Original | Otsu | HSV | K-Means | Pós-processado`
+- [x] Montar painel comparativo: `Original | Otsu | HSV | K-Means | Pós-processado`
 - [x] Incluir visuais de apoio: histogramas, canais de cor, gráfico no plano `a* b*`
-- [ ] Preparar respostas objetivas para todas as reflexões do roteiro:
-  - Parte I: quando Otsu falha? como a janela local da adaptativa afeta ruído/detalhes?
-  - Parte II: qual espaço de cor foi mais robusto a sombras/reflexos e por quê?
-  - Parte III: quando usar apenas cromaticidade ajuda e quando perde informação?
-  - Parte IV: trade-off do elemento estruturante (suavização vs preservação de contorno)
-- [ ] Fechar com conclusão comparativa: robustez, custo computacional e cenários ideais
 
 ## Como colaborar?
 
